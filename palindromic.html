@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindromic</title>
+</head>
+<body>
+    <script>
+        // Example 1
+        const arr = ["abc", "car", "ada", "racecar", "cool"];
+        function findFirstPalindrom(words) {
+    for (let i = 0; i < words.length; i++) {
+        const work = words[i];
+        const real = work.split("").reverse().join("");
+        if (work === real) {
+            return work;
+        }
+    }
+    
+    return "";
+}
+console.log(findFirstPalindrom(arr));
+
+// Example 2
+
+const a = ["notapalindrome","racecar"];
+function isPalindrome(word){
+    return word === word.split('').reverse().join('')
+}
+        function findFirstPalindrom(words) {
+    for (const word of words) {
+        if (isPalindrome(word)){
+            return word;
+        }
+        }
+        return "";
+    }
+console.log(findFirstPalindrom(a));
+    </script>
+</body>
+</html>
